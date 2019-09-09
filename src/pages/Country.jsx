@@ -36,7 +36,7 @@ const showCountry = ({ country }) => {
       ? 
         <div>
           <Title>{country.name}</Title>
-          <p>{country.emoji} • <span role='img' aria-label='phone'>📞</span> {country.phone}</p>
+          <p><span role='img' aria-label='flag'>{country.emoji}</span> • <span role='img' aria-label='phone'>📞</span> {country.phone}</p>
           <Currency>Currency: {country.currency}</Currency>
         </div> 
       : 'Not found'}
