@@ -84,8 +84,12 @@ const showCountries = ({ countries }) => {
       {countries.map((c, index) => (
         <Country key={`c${index}`}>
           <div>
-            <Flag role='img' aria-label='flag'>{c.emoji}</Flag>
-            <CountryName><Link to={`/countries/${c.code}`}>{c.name}</Link></CountryName>
+            <Flag role="img" aria-label="flag">
+              {c.emoji}
+            </Flag>
+            <CountryName>
+              <Link to={`/countries/${c.code}`}>{c.name}</Link>
+            </CountryName>
           </div>
           <div>
             <span>

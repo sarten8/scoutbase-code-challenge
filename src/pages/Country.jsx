@@ -29,17 +29,24 @@ const Currency = styled.p`
   font-size: 18px;
 `
 
+const Flag = styled.span`
+  font-size: 18px;
+`
+
 const showCountry = ({ country }) => {
   return (
     <Fragment>
-      {country 
-      ? 
+      {country ? (
         <div>
           <Title>{country.name}</Title>
-          <p><span role='img' aria-label='flag'>{country.emoji}</span> • <span role='img' aria-label='phone'>📞</span> {country.phone}</p>
+          <Flag role="img" aria-label="flag">
+            {country.emoji} • 📞 {country.phone}
+          </Flag>
           <Currency>Currency: {country.currency}</Currency>
-        </div> 
-      : 'Not found'}
+        </div>
+      ) : (
+        'Not found'
+      )}
     </Fragment>
   )
 }
